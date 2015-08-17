@@ -9,6 +9,7 @@ FROM ibbd/dockerfile-ubuntu
 
 # Install Nginx.
 RUN \
+  apt-get install python-software-properties && \
   add-apt-repository -y ppa:nginx/stable && \
   apt-get update && \
   apt-get install -y nginx && \
