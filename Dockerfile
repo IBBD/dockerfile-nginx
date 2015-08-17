@@ -5,7 +5,7 @@
 #
 
 # Pull base image.
-FROM ibbd/dockerfile-nginx
+FROM ibbd/dockerfile-ubuntu
 
 # Install Nginx.
 RUN \
