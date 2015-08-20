@@ -1,26 +1,23 @@
 ## Nginx Dockerfile
 
 
-This repository contains **Dockerfile** of [Nginx](http://nginx.org/) for [Docker](https://www.docker.com/)'s [automated build](https://registry.hub.docker.com/u/dockerfile/nginx/) published to the public [Docker Hub Registry](https://registry.hub.docker.com/).
-
-
 ### Base Docker Image
 
-* [ibbd/dockerfile-ubuntu](http://github.com/ibbd/dockerfile-ubuntu)
+* ```docker pull nginx```
 
 
 ### Installation
 
-1. Install [Docker](https://www.docker.com/).
+```sh 
+git clone git@github.com:IBBD/dockerfile-nginx.git
+cd dockerfile-nginx
 
-2. Download [automated build](https://registry.hub.docker.com/u/dockerfile/nginx/) from public [Docker Hub Registry](https://registry.hub.docker.com/): `docker pull ibbd/dockerfile-nginx`
-
-   (alternatively, you can build an image from Dockerfile: `docker build -t="ibbd/dockerfile-nginx" github.com/ibbd/dockerfile-nginx`)
-
+sudo docker build -t your-name ./
+```
 
 ### Usage
 
-    docker run -d -p 80:80 ibbd/dockerfile-nginx
+    docker run -d -p 80:80 ibbd/nginx
 
 #### Attach persistent/shared directories
 
