@@ -3,6 +3,8 @@
 #
 # https://github.com/ibbd/dockerfile-nginx
 #
+# sudo docker build -t ibbd/nginx ./
+#
 
 # Pull base image.
 FROM nginx:latest

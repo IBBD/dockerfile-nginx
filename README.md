@@ -12,7 +12,8 @@
 git clone git@github.com:IBBD/dockerfile-nginx.git
 cd dockerfile-nginx
 
-sudo docker build -t your-name ./
+#sudo docker build -t your-name ./
+sudo docker build -t ibbd/nginx ./
 ```
 
 ### Usage
