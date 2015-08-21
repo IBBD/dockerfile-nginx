@@ -23,7 +23,8 @@ COPY conf/fastcgi_params /etc/nginx/fastcgi_params
 WORKDIR /etc/nginx
 
 # Define default command.
-CMD ["nginx"]
+# 加上这个会启动不了
+#CMD ["nginx"]
 
 # Expose ports.
 EXPOSE 80
