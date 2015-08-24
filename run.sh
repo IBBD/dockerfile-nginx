@@ -12,5 +12,5 @@ docker run --name ibbd-nginx -d \
     --volumes-from ibbd-php \
     ibbd/nginx
 
-docker ps -a
+docker ps
 
