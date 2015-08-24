@@ -8,7 +8,7 @@ docker run --name ibbd-nginx -d \
     --link ibbd-php:php-fpm \
     -v /usr/local/nginx/conf/vhost:/etc/nginx/sites-enabled \
     -v /var/log/nginx:/var/log/nginx \
-    -v /home/code/ibbd:/var/www \
+    -v /home/code/ibbd:/var/www/html \
     --volumes-from ibbd-php \
     ibbd/nginx
 
