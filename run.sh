@@ -3,6 +3,7 @@
 docker stop ibbd-nginx 
 docker rm ibbd-nginx 
 
+# 注意：这里需要 volumes-from ,否则出错, 因为nginx需要用到相应的路径
 docker run --name=ibbd-nginx -d \
     -p 80:80 \
     --link ibbd-php-fpm:php-fpm \

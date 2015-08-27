@@ -12,7 +12,7 @@ FROM nginx:latest
 MAINTAINER Alex Cai "cyy0523xc@gmail.com"
 
 # Define mountable directories.
-VOLUME ["/etc/nginx/sites-enabled", "/etc/nginx/certs", "/var/log/nginx", "/var/www"]
+#VOLUME ["/etc/nginx/sites-enabled", "/etc/nginx/certs", "/var/log/nginx", "/var/www"]
 
 # 使用自定义配置文件
 COPY conf/nginx.conf     /etc/nginx/nginx.conf
