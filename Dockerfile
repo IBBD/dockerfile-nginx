@@ -22,6 +22,9 @@ COPY conf/fastcgi_params /etc/nginx/fastcgi_params
 # Define working directory.
 WORKDIR /etc/nginx
 
+# 解决时区问题
+env TZ "Asia/Shanghai"
+
 # Define default command.
 # 加上这个会启动不了
 #CMD ["nginx"]
