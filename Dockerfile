@@ -21,6 +21,10 @@ COPY conf/fastcgi.conf   /etc/nginx/fastcgi.conf
 # Define working directory.
 WORKDIR /etc/nginx
 
+# 创建一个临时目录
+# 可以在运行时挂载一个目录
+RUN mkdir -p /data/tmp
+
 # 解决时区问题
 env TZ "Asia/Shanghai"
 
