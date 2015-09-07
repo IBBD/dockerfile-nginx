@@ -15,7 +15,7 @@ MAINTAINER Alex Cai "cyy0523xc@gmail.com"
 #VOLUME ["/etc/nginx/sites-enabled", "/etc/nginx/certs", "/var/log/nginx", "/var/www"]
 
 # 使用自定义配置文件
-COPY conf/nginx.conf     /etc/nginx/nginx.conf
+#COPY conf/nginx.conf     /etc/nginx/nginx.conf
 COPY conf/fastcgi.conf   /etc/nginx/fastcgi.conf
 
 # Define working directory.

@@ -13,7 +13,7 @@ cp_example() {
 # 初始化nginx的配置文件
 cp_example run.sh
 cp_example conf/nginx.conf
-cp_example conf/fastcgi.conf
+# cp_example conf/fastcgi.conf
 
 # 创建相关目录
 create_dir /var/log/nginx

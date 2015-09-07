@@ -1,3 +1,2 @@
-/conf/fastcgi.conf
-/conf/nginx.conf
 /run.sh
+/conf/nginx.conf
