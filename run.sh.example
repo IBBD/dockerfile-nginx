@@ -1,5 +1,11 @@
 #!/bin/bash
+# 
+# 运行：
+# cp ./run.sh.example ./run.sh
 # sudo ./run.sh
+# 
+# 注意：需要先从镜像 ibbd/php-fpm 启动容器 ibbd-php-fpm
+# 
 
 #-----------------------------------
 # ----- 配置目录  BEGIN ------------
