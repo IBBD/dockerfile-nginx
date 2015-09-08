@@ -17,7 +17,7 @@ code_path=/var/www
 # nginx配置目录
 conf_path=/etc/nginx/nginx-conf-v2/products
 sites_path=$conf_path/sites-enabled
-nginx_conf_path=$code_path/nginx.conf
+nginx_conf_path=$conf_path/nginx.conf
 
 # nginx日志目录
 logs_path=/var/log/nginx
