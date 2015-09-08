@@ -41,6 +41,7 @@ conf_path=/etc/nginx/nginx-conf/product-env
 # nginx日志目录
 logs_path=/var/log/nginx
 
+current_path=$(pwd)
 docker run --name=ibbd-nginx -d \
     -p 80:80 \
     --link ibbd-php-fpm:php-fpm \
