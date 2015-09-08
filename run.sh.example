@@ -15,7 +15,9 @@
 code_path=/var/www
 
 # nginx配置目录
-conf_path=/etc/nginx/nginx-conf/product-env
+conf_path=/etc/nginx/nginx-conf-v2/products
+sites_path=$conf_path/sites-enabled
+nginx_conf_path=$code_path/nginx.conf
 
 # nginx日志目录
 logs_path=/var/log/nginx
@@ -26,10 +28,11 @@ logs_path=/var/log/nginx
 
 
 name=nginx
-current_path=$(pwd)
-if [ ! -f $current_path/conf/nginx.conf ]
+#current_path=$(pwd)
+#if [ ! -f $current_path/conf/nginx.conf ]
+if [ ! -f $nginx_conf_path ]
 then
-    echo "ERROR: $current_path is error."
+    echo "ERROR: $nginx_conf_path is error."
     exit 1
 fi
 
@@ -42,8 +45,8 @@ docker run --name=ibbd-$name -d \
     --link ibbd-php-fpm:php-fpm \
     -v $code_path:/var/www \
     -v $logs_path:/var/log/nginx \
-    -v $conf_path:/etc/nginx/sites-enabled:ro \
-    -v $current_path/conf/nginx.conf:/etc/nginx/nginx.conf:ro \
+    -v $sites_path:/etc/nginx/sites-enabled:ro \
+    -v $nginx_conf_path:/etc/nginx/nginx.conf:ro \
     --volumes-from ibbd-php-fpm \
     ibbd/$name 
 
