@@ -42,6 +42,7 @@ docker rm ibbd-$name
 # 注意：这里需要 volumes-from ,否则出错, 因为nginx需要用到相应的路径
 docker run --name=ibbd-$name -d \
     -p 80:80 \
+    -p 443:443 \
     --link ibbd-php-fpm:php-fpm \
     -v $code_path:/var/www \
     -v $logs_path:/var/log/nginx \
@@ -51,4 +52,3 @@ docker run --name=ibbd-$name -d \
     ibbd/$name 
 
 docker ps
-
