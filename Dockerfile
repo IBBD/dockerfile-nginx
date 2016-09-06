@@ -7,7 +7,8 @@
 #
 
 # Pull base image.
-FROM nginx:stable
+#FROM nginx:stable
+FROM nginx
 
 MAINTAINER Alex Cai "cyy0523xc@gmail.com"
 
