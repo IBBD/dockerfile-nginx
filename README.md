@@ -2,7 +2,8 @@
 
 ### 基础镜像
 
-* ```docker pull nginx```
+- `docker pull nginx`
+- 最新稳定版
 
 
 ### 安装
