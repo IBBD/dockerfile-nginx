@@ -28,9 +28,8 @@ RUN mkdir -p /data/tmp
 # 解决时区问题
 env TZ "Asia/Shanghai"
 
-# Define default command.
-# 加上这个会启动不了
-#CMD ["nginx"]
+# 终端设置
+env TERM xterm
 
 # Expose ports.
 EXPOSE 80
