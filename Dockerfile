@@ -23,13 +23,14 @@ WORKDIR /etc/nginx
 
 # 创建一个临时目录
 # 可以在运行时挂载一个目录
-RUN mkdir -p /data/tmp
+RUN mkdir -p /data/tmp \
+    && cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
 # 解决时区问题
-env TZ "Asia/Shanghai"
+ENV TZ "Asia/Shanghai"
 
 # 终端设置
-env TERM xterm
+ENV TERM xterm
 
 # Expose ports.
 EXPOSE 80
