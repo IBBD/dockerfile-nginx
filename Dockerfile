@@ -13,6 +13,10 @@ MAINTAINER Alex Cai "cyy0523xc@gmail.com"
 
 # 安装两个常用工具: ping and telnet
 # 在nginx判断上游服务是否ok时经常需要用到
+# 当发现上游服务有问题时，例如超时等，可以：
+# 1. 先ping上游服务的ip，看是否通
+# 2. 然后使用telnet，判断端口是否通
+# 如果有问题的话，往往都是iptables导致的
 RUN apt-get update -y \
     && apt-get install -y --no-install-recommends \
         iputils-ping \
