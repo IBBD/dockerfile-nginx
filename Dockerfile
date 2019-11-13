@@ -11,8 +11,13 @@ FROM nginx:stable
 
 MAINTAINER Alex Cai "cyy0523xc@gmail.com"
 
-# Define mountable directories.
-#VOLUME ["/etc/nginx/sites-enabled", "/etc/nginx/certs", "/var/log/nginx", "/var/www"]
+# 安装两个常用工具: ping and telnet
+# 在nginx判断上游服务是否ok时经常需要用到
+RUN apt-get update -y \
+    && apt-get install -y --no-install-recommends \
+        iputils-ping \
+        telnet \
+    && rm -rf /var/lib/apt/lists/*
 
 # 使用自定义配置文件
 #COPY conf/nginx.conf     /etc/nginx/nginx.conf
@@ -35,4 +40,3 @@ ENV TERM xterm
 # Expose ports.
 EXPOSE 80
 EXPOSE 443
-
