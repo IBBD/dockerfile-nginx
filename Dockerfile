@@ -24,8 +24,8 @@ RUN apt-get update -y \
     && rm -rf /var/lib/apt/lists/*
 
 # 使用自定义配置文件
-#COPY conf/nginx.conf     /etc/nginx/nginx.conf
-COPY conf/fastcgi.conf   /etc/nginx/fastcgi.conf
+# COPY conf/nginx.conf     /etc/nginx/nginx.conf
+# COPY conf/fastcgi.conf   /etc/nginx/fastcgi.conf
 
 # Define working directory.
 WORKDIR /etc/nginx
